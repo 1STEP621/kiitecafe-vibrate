@@ -1,0 +1,48 @@
+.gesture_rotate {
+  --amount: 2px;
+}
+
+.new_fav {
+  --amount: 3px
+}
+
+.reason_fav {
+  --amount: 4px;
+}
+
+.reason_playlist {
+  --amount: 5px;
+}
+
+.commenting_now {
+  --amount: 7px;
+}
+
+/*振動させる*/
+:is(.gesture_rotate, .new_fav, .reason_fav, .reason_playlist, .commenting_now):not(:hover) {
+  --minus-amount: calc(var(--amount) * -1);
+  animation: vibration .3s infinite both steps(2, start);
+}
+
+/*ついでに回転を爆速に*/
+.gesture_rotate .thumbnail {
+  animation: user_icon_getsture_rotation 2s infinite linear !important;
+}
+
+@keyframes vibration {
+  25% {
+    margin: translate(var(--minus-amount), var(--minus-amount));
+  }
+
+  50% {
+    margin: translate(var(--amount), var(--minus-amount));
+  }
+
+  75% {
+    margin: translate(var(--minus-amount), var(--amount));
+  }
+
+  100% {
+    margin: translate(var(--amount), var(--amount));
+  }
+}

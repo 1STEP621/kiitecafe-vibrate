@@ -1,0 +1,10 @@
+{
+  "name": "KiiteCafe Vibrate",
+  "description": "KiiteCafeの画面をやかましくします。",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "content_scripts": [{
+    "matches": ["https://cafe.kiite.jp/*"],
+    "css": ["style.css"]
+  }]
+}
