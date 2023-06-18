@@ -21,7 +21,7 @@
 /*振動させる*/
 :is(.gesture_rotate, .new_fav, .reason_fav, .reason_playlist, .commenting_now):not(:hover) {
   --minus-amount: calc(var(--amount) * -1);
-  animation: vibration .3s infinite both steps(2, start);
+  animation: vibration .2s infinite both steps(1, start);
 }
 
 /*ついでに回転を爆速に*/
@@ -35,7 +35,7 @@
   }
 
   50% {
-    transform: translate(var(--amount), var(--minus-amount));
+    transform: translate(var(--amount), var(--amount));
   }
 
   75% {
@@ -43,6 +43,6 @@
   }
 
   100% {
-    transform: translate(var(--amount), var(--amount));
+    transform: translate(var(--amount), var(--minus-amount));
   }
 }
