@@ -31,18 +31,18 @@
 
 @keyframes vibration {
   25% {
-    margin: translate(var(--minus-amount), var(--minus-amount));
+    transform: translate(var(--minus-amount), var(--minus-amount));
   }
 
   50% {
-    margin: translate(var(--amount), var(--minus-amount));
+    transform: translate(var(--amount), var(--minus-amount));
   }
 
   75% {
-    margin: translate(var(--minus-amount), var(--amount));
+    transform: translate(var(--minus-amount), var(--amount));
   }
 
   100% {
-    margin: translate(var(--amount), var(--amount));
+    transform: translate(var(--amount), var(--amount));
   }
 }
